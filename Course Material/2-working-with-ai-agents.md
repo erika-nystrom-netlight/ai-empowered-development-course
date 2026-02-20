@@ -83,7 +83,7 @@ When you use `/plan`, Claude will:
 
 ## Context Window Management
 
-Model's have a set context window (how many tokens can be stored in memory) when processing your prompts. Anthropic models tend to have 200k tokens context windows and Google's Gemini models offers up to 1M tokens.
+Model's have a set context window (how many tokens can be stored in memory) when processing your prompts. Anthripic models tend to have 200k tokens context windows and Google's Gemini models offers up to 1M tokens.
 
 ### The Problem
 Models performance is heavily influenced by:
@@ -141,34 +141,17 @@ Task: Implement date picker with date-fns
 
 | | |
 |---|---|
-| **Goal** | Add persistence or a local storage option for your To Do app so "todos" survive page refreshes |
+| **Goal** | Add persistence so todos survive page refreshes |
 | **Concepts** | Agent prompting, iterative development, validation |
 
 ### Steps
-Before you start with the exercise:
-1. Go to the browser and add a todo.
-2. Now refresh the page.
 
-What happens? The todo is no longer visible. To find out why, we will ask Claude before implementing the solution directly.
-
-1. Open Claude Code in the project folder `ai-powered-development-course`
+1. Open Claude Code
    ```bash
    claude
    ```
 
 2. Give Claude this prompt:
-   ```
-   /plan
-
-   A TODO item appears in the app when I add it, but disappears after a page refresh.
-   Explain what you think is happening and why, and outline how you would approach
-   confirming your theory.
-   Do not change or write any code, only provide reasoning and possible explanations.
-
-   ```
-Review Claude's reasoning. It should be related to localStorage, persistence and state of components in a frontend application. Otherwise, revise your prompt.
-
-3. After getting the right response from Claude, you can proceed with the exercise:
    ```
    Add localStorage persistence to the TODO app. When todos are added,
    completed, or deleted, save them to localStorage. When the app loads,
@@ -182,10 +165,7 @@ Review Claude's reasoning. It should be related to localStorage, persistence and
 
 5. Verify todos persist with correct completed/incomplete states
 
-6. Edge case test: Clear localStorage, refresh, verify empty list   
-a. `Safari`: Develop Menu → Developer Settings → Privacy → Manage Website Data → Remove all for 127.0.0.1  
-b. `Chrome`: Press F12 → Developer Tools → Application Menu → Expand Storage from left menu → Clear
-      
+6. Edge case test: Clear localStorage (DevTools → Application → Storage), refresh, verify empty list
 
 ### Acceptance Criteria
 - [ ] Todos persist across page refreshes

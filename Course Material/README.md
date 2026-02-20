@@ -32,13 +32,13 @@ These modules cover foundational concepts that apply to all roles:
    - Setting up custom safety rules
    - Exercise: Test SafetyNet protection
 
-5. **[Task Orchestration with VibeKanban](5-task-orchestration-vibekanban.md)** *[~30-45 minutes]*
+   5. **[Task Orchestration with VibeKanban](5-task-orchestration-vibekanban.md)** *[~30-45 minutes]*
    - Setting up VibeKanban for multi-agent execution
    - Creating tickets from plans
    - Running multiple agents in parallel
    - Exercise: Implement 3 features in parallel with merge conflict resolution
 
-6. **[Advanced Planning with Speckit](6-advanced-planning-speckit.md)** *[~30 minutes]*
+   6. **[Advanced Planning with Speckit](6-advanced-planning-speckit.md)** *[~30 minutes]*
    - Spec-Driven Development concepts
    - SpecKit workflow and commands
    - When to use SpecKit vs simple planning

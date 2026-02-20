@@ -95,41 +95,25 @@ This is what MCP enables: **frictionless access to external capabilities**.
 | **Goal** | Experience MCP in action—use Context7 to implement a feature without manual docs |
 | **Concepts** | MCP integration, on-demand documentation access, library implementation |
 
-### Before You Start: Why MCP Matters
-MCP lets AI agents safely use real tools and real data instead of guessing or relying on copy-pasted context. Once a tool exposes an MCP server, any compatible model can use it without custom integrations.  
-
-**Concrete MCP examples**
-- **Figma MCP**: Read design files, extract colors/components, and check design–code consistency.
-```bash
-claude mcp add --transport http figma https://mcp.figma.com/mcp
-```
-- **Notion MCP**: Search internal docs, policies, and specs using live workspace knowledge.
-```bash
-claude mcp add --transport http notion https://mcp.notion.com/mcp
-``` 
-- **VibeKanban**: Read and update tickets, reason about task status, and coordinate work directly from the board instead of relying on human summaries.  
-
-In this exercise, Context7 applies the same idea to documentation: the agent pulls authoritative, up-to-date docs on demand instead of you searching manually.
-
 ### Steps
 
-1. Get your API key from [context7.com](https://context7.com/dashboard). You will have to login with  your Github account, click on "More.." on the website and "Create a New API Key".  
-2. Ensure Context7 MCP is installed
+1. Ensure Context7 MCP is installed
    ```bash
    claude mcp add context7 -- npx -y @upstash/context7-mcp --api-key YOUR_API_KEY
    ```
+   (Get your API key from [context7.com](https://context7.com))
 
-3. Restart Claude Code to load the MCP. (To restart Claude, type `exit` in Claude code and run `claude` again)
+2. Restart Claude Code to load the MCP
 
-4. Ask Claude to use Context7 for date-fns documentation:
+3. Ask Claude to use Context7 for date-fns documentation:
    ```
    Using Context7 MCP, fetch the date-fns documentation and show me
    the key functions for formatting and parsing dates.
    ```
 
-   **Notice**: Claude doesn't search manually or guess anything! The MCP server context7 fetches live docs on-demand.
+   **Notice**: Claude doesn't search manually or guess—the MCP server fetches live docs on-demand.
 
-5. Ask Claude to implement due dates:
+4. Ask Claude to implement due dates:
    ```
    Add due dates to todos using date-fns. Each todo should have an optional
    due date that's formatted nicely in the UI. Add the ability to sort todos
@@ -137,7 +121,7 @@ In this exercise, Context7 applies the same idea to documentation: the agent pul
    examples or edge cases.
    ```
 
-6. Test the feature:
+5. Test the feature:
    - Add todos with and without due dates
    - Verify dates display nicely (e.g., "Today", "Tomorrow", "Jan 25")
    - Sort by due date and verify order

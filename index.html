@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>My App</h1>
+        <button id="darkModeBtn" class="dark-mode-btn">Dark Mode</button>
     </header>
 
     <main>
@@ -23,6 +24,11 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="active">Active</button>
                 <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="history-controls">
+                <button id="undoBtn" class="history-btn" disabled>Undo</button>
+                <button id="redoBtn" class="history-btn" disabled>Redo</button>
             </div>
 
             <ul class="todoList" id="todoList"></ul>
